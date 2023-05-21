@@ -9,8 +9,9 @@
   color-scheme: light;
   font-size: small;
 }
-html {
+.principal {
   padding: 4%;
+  display: block;
 }
 nav,
 .A {
@@ -21,9 +22,10 @@ nav,
 nav {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
-.heading {
+.heading,
+.list-heading {
   color: #ff5500;
   font-weight: bold;
   display: flex;
@@ -31,27 +33,34 @@ nav {
 }
 .heading img,
 .search img,
-.card-details img {
+.card-details img,
+.list-heading img,
+#list-search img {
   width: 20px;
 }
-.filter {
+#filter {
   display: flex;
   border: 1px grey solid;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   color: var(--grey);
+  cursor: default;
+  z-index: 2;
 }
-.filter div {
+#filter div {
+  width: 90px;
   padding: 5px;
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 }
-#places,
-#guests {
+.places,
+.guests {
   border-right: 1px grey solid;
   padding: auto;
 }
-main {
+main,
+#anime {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -94,4 +103,96 @@ footer {
   margin: 60px 0 30px 0;
   text-align: center;
   color: var(--grey);
+}
+#anime {
+  height: 0;
+  overflow: hidden;
+  padding: 50px;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+}
+@keyframes filter {
+  0% {
+    height: 0;
+    z-index: 1;
+  }
+  100% {
+    height: 50%;
+    z-index: 3;
+  }
+}
+@keyframes rev-filter {
+  0% {
+    height: 50%;
+    z-index: 3;
+  }
+  100% {
+    height: 0;
+    z-index: 1;
+  }
+}
+.list-heading {
+  margin-bottom: 30px;
+}
+.lists {
+  display: flex;
+  justify-content: space-around;
+}
+#list-places,
+#list-guests {
+  display: inline-block;
+}
+:is(#list-guests, #list-places) ul {
+  list-style: none;
+}
+:is(#list-guests, #list-places) ul li {
+  padding: 10px;
+  width: 300px;
+}
+:is(#list-guests, #list-places) ul li:hover {
+  border: 1px black solid;
+  border-radius: 10px;
+}
+:is(#list-guests, #list-places) ul li:first-child {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 10px;
+}
+#list-guests {
+  opacity: 0.5;
+}
+#list-search {
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff5500;
+  color: white;
+  height: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 10px;
+}
+#list-search:hover {
+  color: #ff5500;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card:first-of-type {
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+@keyframes whoosh {
+  0% {
+    border: radius 0;
+    width: 386.4px;
+    height: 244px;
+    position: static;
+  }
+  100% {
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+  }
 }

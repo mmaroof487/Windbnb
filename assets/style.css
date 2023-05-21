@@ -1,0 +1,97 @@
+:root {
+  --grey: rgb(94, 94, 94);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color-scheme: light;
+  font-size: small;
+}
+html {
+  padding: 4%;
+}
+nav,
+.A {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+}
+nav {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 40px;
+}
+.heading {
+  color: #ff5500;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+}
+.heading img,
+.search img,
+.card-details img {
+  width: 20px;
+}
+.filter {
+  display: flex;
+  border: 1px grey solid;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: var(--grey);
+}
+.filter div {
+  padding: 5px;
+  display: flex;
+  align-items: flex-start;
+}
+#places,
+#guests {
+  border-right: 1px grey solid;
+  padding: auto;
+}
+main {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.A div:first-child {
+  font-size: large;
+  font-weight: 700;
+}
+.A div:last-child {
+  color: rgb(94, 94, 94);
+  font-weight: 700;
+}
+.B {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  display: inline-block;
+  width: 386.4px;
+  margin: 10px 0;
+}
+.card-image {
+  border: 1px white solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-image img {
+  height: 244px;
+  width: 100%;
+}
+.card-details {
+  display: flex;
+  justify-content: space-between;
+}
+.card-details span:first-child {
+  color: var(--grey);
+}
+footer {
+  display: block;
+  margin: 60px 0 30px 0;
+  text-align: center;
+  color: var(--grey);
+}

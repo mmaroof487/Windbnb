@@ -31,10 +31,11 @@ nav {
 }
 .heading,
 .list-heading {
+  display: inline-block;
   color: #ff5500;
   font-weight: bold;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 .heading img,
 .search img,
@@ -53,7 +54,6 @@ nav {
   z-index: 2;
 }
 #filter div {
-  width: 90px;
   padding: 5px;
   display: flex;
   align-items: flex-start;
@@ -205,5 +205,17 @@ footer {
     border-radius: 100%;
     width: 0;
     height: 0;
+  }
+}
+
+@media (width < 800px) {
+  #filter {
+    margin: 20px;
+  }
+  .B {
+    justify-content: center;
+  }
+  #anime {
+    display: none;
   }
 }

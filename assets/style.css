@@ -9,10 +9,11 @@
   box-sizing: border-box;
   color-scheme: light;
   font-size: small;
+  font-family: "Poppins", sans-serif;
 }
 /* body start  */
 .principal {
-  padding: 4%;
+  padding: 0 4%;
   display: block;
 }
 
@@ -24,18 +25,25 @@ nav,
   display: flex;
   justify-content: space-between;
 }
+.navshadow {
+  height: 130px;
+}
 nav {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  background-color: white;
   margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  width: 92%;
+  padding: 50px 0;
 }
 .heading,
 .list-heading {
   display: inline-block;
   color: #ff5500;
-  font-weight: bold;
   display: flex;
   align-items: center;
+  font-size: 20px;
+  font-weight: bolder;
 }
 .heading img,
 .search img,
@@ -45,6 +53,7 @@ nav {
   width: 20px;
 }
 #filter {
+  width: 25%;
   display: flex;
   border: 1px grey solid;
   border-radius: 10px;
@@ -54,6 +63,7 @@ nav {
   z-index: 2;
 }
 #filter div {
+  width: 33%;
   padding: 5px;
   display: flex;
   align-items: flex-start;
@@ -71,8 +81,9 @@ nav {
   overflow: hidden;
   padding: 50px;
   background-color: white;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  padding: 0;
 }
 .list-heading {
   margin-bottom: 30px;
@@ -125,10 +136,12 @@ nav {
   0% {
     height: 0;
     z-index: 1;
+    padding: 0;
   }
   100% {
-    height: 50%;
+    height: 360px;
     z-index: 3;
+    padding: 50px;
   }
 }
 @keyframes rev-filter {
@@ -149,6 +162,9 @@ main,
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+.A {
+  margin-bottom: 15px;
+}
 .A div:first-child {
   font-size: large;
   font-weight: 700;
@@ -164,7 +180,7 @@ main,
 }
 .card {
   display: inline-block;
-  width: 386.4px;
+  width: 450px;
   margin: 10px 0;
 }
 .card-image {
@@ -189,28 +205,47 @@ footer {
   text-align: center;
   color: var(--grey);
 }
-.card:first-of-type {
+.card {
   border: 1px solid transparent;
   overflow: hidden;
 }
 /* keyframe card  */
 @keyframes whoosh {
   0% {
-    border: radius 0;
-    width: 386.4px;
+    /* width: 386.4px;
     height: 244px;
-    position: static;
+    position: relative; */
+    display: inline-block;
   }
   100% {
-    border-radius: 100%;
-    width: 0;
+    /* width: 0;
     height: 0;
+    position: relative; */
+    display: none;
   }
+  /* 100% {
+    /* width: 800px;
+    height: 1000px;
+    position: absolute; */
 }
-
-@media (width < 800px) {
+@media (width < 1000px) {
+  .navshadow {
+    height: 130px;
+  }
+  nav {
+    padding: 10px 0;
+  }
+  .heading {
+    font-size: medium;
+  }
   #filter {
     margin: 20px;
+    width: 60%;
+  }
+  #filter div {
+    height: 25px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .B {
     justify-content: center;

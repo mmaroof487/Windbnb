@@ -1,0 +1,16 @@
+{
+ "favorites.resources": [
+  {
+   "filePath": "index.html",
+   "group": "Default"
+  },
+  {
+   "filePath": "assets\\style.css",
+   "group": "Default"
+  },
+  {
+   "filePath": "js\\script.js",
+   "group": "Default"
+  }
+ ]
+}

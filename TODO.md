@@ -6,13 +6,15 @@ Project Description
 
 ### Todo
 
-- [ ] design cards (havent designed yet)  
-- [ ] make Responsive (complicated)  
-- [ ] use AND intesad of OR in filter (dont know how to do)  
+- [ ] use AND instead of OR in filter (dont know how to do)  
+- [ ] design cards (not needed for devchallenges)  
 
 ### In Progress
 
+- [ ] make Responsive                     (guest list pending)  
 
 ### Done ✓
 
+- [x] filter not working  
+- [x] whatever user selects in anime is to be shown in filter section outside anime  
 

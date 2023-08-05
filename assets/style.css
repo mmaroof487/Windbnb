@@ -340,7 +340,7 @@ footer {
   pointer-events: none;
  }
  #guests {
-  width: 150px !important;
+  width: 60% !important;
  }
  #filter {
   width: 50%;

@@ -8,6 +8,7 @@ const places = document.getElementById("places");
 const guest = document.getElementById("guest");
 
 // *filter appear
+
 filter.onclick = () => {
  if (screen.width > 980) {
   anime.style.animation = "filter .5s forwards";
@@ -15,10 +16,12 @@ filter.onclick = () => {
  } else {
   anime.style.animation = "resp-filter .5s forwards";
   main.style.opacity = ".7";
+  listGuests.style.opacity = "1";
  }
 };
 
 // *list opacity
+
 listGuests.onmouseover = () => {
  listGuests.style.opacity = "1";
  listPlaces.style.opacity = ".5";
@@ -33,6 +36,7 @@ listPlaces.onmouseover = () => {
 };
 
 // *location set
+
 const locationClick = document.getElementsByClassName("location-click");
 const locations = document.getElementById("locations");
 
@@ -45,6 +49,7 @@ for (let i = 0; i < locationClick.length; i++) {
 }
 
 // *guest set
+
 const guestClick = document.getElementsByClassName("guest-click");
 const guests = document.getElementById("guests");
 for (let i = 0; i < guestClick.length; i++) {
@@ -56,6 +61,7 @@ for (let i = 0; i < guestClick.length; i++) {
 }
 
 // *filter vanish
+
 main.onclick = () => {
  if ((listSearch.innerHTML = `<img src="assets/images/search2.png"/> Search`)) {
   main.style.opacity = "1";
@@ -68,6 +74,7 @@ main.onclick = () => {
 };
 
 // *search function
+
 const card = document.getElementsByClassName("cards");
 const sgr = document.getElementsByClassName("sgr");
 const anant = document.getElementsByClassName("anant");
@@ -135,6 +142,7 @@ listSearch.onclick = () => {
 };
 
 // *nav change on scroll
+
 const nav = document.getElementById("nav");
 document.onscroll = () => {
  if (document.documentElement.scrollTop > 10) {

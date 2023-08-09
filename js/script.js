@@ -6,14 +6,18 @@ const listGuests = document.getElementById("list-guests");
 const listSearch = document.getElementById("list-search");
 const places = document.getElementById("places");
 const guest = document.getElementById("guest");
-const lists = document.getElementById("lists");
-const listInner = document.getElementById("lists").innerHTML;
 
 // *filter appear
 filter.onclick = () => {
- anime.style.animation = "filter .5s forwards";
- main.style.opacity = ".7";
+ if (screen.width > 980) {
+  anime.style.animation = "filter .5s forwards";
+  main.style.opacity = ".7";
+ } else {
+  anime.style.animation = "resp-filter .5s forwards";
+  main.style.opacity = ".7";
+ }
 };
+
 // *list opacity
 listGuests.onmouseover = () => {
  listGuests.style.opacity = "1";
@@ -62,16 +66,6 @@ main.onclick = () => {
   guests.innerHTML = "Guests :";
  }
 };
-
-// *responsive filter
-if (screen.width < 980) {
- console.log("screen smol");
- listGuests.onmouseover = () => {
-  console.log("lol");
-  listGuests.style.opacity = "1";
-  listGuests.style.zIndex = "9";
- };
-}
 
 // *search function
 const card = document.getElementsByClassName("cards");

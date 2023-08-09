@@ -87,6 +87,10 @@ nav {
  position: fixed;
  width: 100%;
 }
+.sub-lists {
+ display: flex;
+ justify-content: space-between;
+}
 .list-heading {
  margin-bottom: 30px;
 }
@@ -102,6 +106,7 @@ nav {
 }
 :is(#list-guests, #list-places) ul {
  list-style: none;
+ display: inline-block;
 }
 :is(#list-guests, #list-places) ul li {
  padding: 10px;
@@ -148,6 +153,18 @@ nav {
  }
  100% {
   height: 360px;
+  z-index: 3;
+  padding: 50px 4%;
+ }
+}
+@keyframes resp-filter {
+ 0% {
+  height: 0;
+  z-index: 1;
+  padding: 0;
+ }
+ 100% {
+  height: 450px;
   z-index: 3;
   padding: 50px 4%;
  }
@@ -328,24 +345,15 @@ footer {
 /* *responsive */
 
 @media (width < 980px) {
+ #list-search {
+  width: 150px;
+ }
  .lists {
-  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
  }
  :is(#list-guests, #list-places) ul li {
   width: 50vw;
- }
- #list-guests {
-  opacity: 0.3;
-  position: absolute;
-  left: 53vw;
- }
- /* #list-guests:hover {
-  opacity: 1;
-  left: 20vw;
-  z-index: 9;
- } */
- #guests {
-  width: 60% !important;
  }
  #filter {
   width: 50%;

@@ -118,8 +118,7 @@ listSearch.onclick = () => {
    result.innerHTML = "Stays in Baramullah";
    barm[i].style.display = "block";
   }
- }
- if (roomtest.test(guests.innerHTML)) {
+ } else if (roomtest.test(guests.innerHTML)) {
   for (let i = 0; i <= room.length; i++) {
    resultant.innerHTML = `${i + 1} stays`;
    room[i].style.display = "block";

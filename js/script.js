@@ -15,20 +15,17 @@ filter.onclick = () => {
  main.style.opacity = ".7";
 };
 // *list opacity
-listPlaces.onclick = () => {
- listPlaces.style.opacity = "1";
- listGuests.style.opacity = ".5";
-};
-listGuests.onclick = () => {
+listGuests.onmouseover = () => {
  listGuests.style.opacity = "1";
  listPlaces.style.opacity = ".5";
+ listPlaces.style.transition = ".5s ease-in-out";
+ listGuests.style.transition = ".5s ease-in-out";
 };
-// *filter vanish
-main.onclick = () => {
- if ((listSearch.innerHTML = `<img src="assets/images/search2.png"/> Search`)) {
-  main.style.opacity = "1";
-  anime.style.animation = "rev-filter .5s forwards";
- }
+listPlaces.onmouseover = () => {
+ listPlaces.style.opacity = "1";
+ listGuests.style.opacity = "0.5";
+ listPlaces.style.transition = ".5s ease-in-out";
+ listGuests.style.transition = ".5s ease-in-out";
 };
 
 // *location set
@@ -46,12 +43,33 @@ for (let i = 0; i < locationClick.length; i++) {
 // *guest set
 const guestClick = document.getElementsByClassName("guest-click");
 const guests = document.getElementById("guests");
-
 for (let i = 0; i < guestClick.length; i++) {
  guestClick[i].onclick = () => {
   let m = guestClick[i].innerHTML;
   guests.innerHTML = `Number of Guests :  ${m}`;
   guest.innerHTML = `${m}`;
+ };
+}
+
+// *filter vanish
+main.onclick = () => {
+ if ((listSearch.innerHTML = `<img src="assets/images/search2.png"/> Search`)) {
+  main.style.opacity = "1";
+  anime.style.animation = "rev-filter .5s forwards";
+  places.innerHTML = "J&K";
+  guest.innerHTML = "Add Guests";
+  locations.innerHTML = "Location set to : J&K";
+  guests.innerHTML = "Guests :";
+ }
+};
+
+// *responsive filter
+if (screen.width < 980) {
+ console.log("screen smol");
+ listGuests.onmouseover = () => {
+  console.log("lol");
+  listGuests.style.opacity = "1";
+  listGuests.style.zIndex = "9";
  };
 }
 
@@ -99,7 +117,8 @@ listSearch.onclick = () => {
    result.innerHTML = "Stays in Baramullah";
    barm[i].style.display = "block";
   }
- } else if (roomtest.test(guests.innerHTML)) {
+ }
+ if (roomtest.test(guests.innerHTML)) {
   for (let i = 0; i <= room.length; i++) {
    resultant.innerHTML = `${i + 1} stays`;
    room[i].style.display = "block";
@@ -126,7 +145,6 @@ const nav = document.getElementById("nav");
 document.onscroll = () => {
  if (document.documentElement.scrollTop > 10) {
   nav.style.padding = "30px 0";
- } else {
-  nav.style.padding = "50px 0";
+  nav.style.transition = ".1s ease-in-out";
  }
 };

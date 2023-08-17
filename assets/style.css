@@ -157,18 +157,7 @@ nav {
   padding: 50px 4%;
  }
 }
-@keyframes resp-filter {
- 0% {
-  height: 0;
-  z-index: 1;
-  padding: 0;
- }
- 100% {
-  height: 50vh;
-  z-index: 3;
-  padding: 50px 4%;
- }
-}
+
 @keyframes rev-filter {
  0% {
   height: 50%;
@@ -345,6 +334,18 @@ footer {
 /* *responsive */
 
 @media (width < 980px) {
+ @keyframes filter {
+  0% {
+   height: 0;
+   z-index: 1;
+   padding: 0;
+  }
+  100% {
+   height: 450px;
+   z-index: 3;
+   padding: 50px 4%;
+  }
+ }
  #list-search {
   width: 150px;
  }

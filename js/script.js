@@ -10,16 +10,9 @@ const guest = document.getElementById("guest");
 // *filter appear
 
 filter.onclick = () => {
- if (screen.width > 980) {
-  anime.style.animation = "filter .5s forwards";
-  main.style.opacity = ".7";
- } else {
-  anime.style.animation = "resp-filter .5s forwards";
-  main.style.opacity = ".7";
-  listGuests.style.opacity = "1";
- }
+ anime.style.animation = "filter .5s forwards";
+ main.style.opacity = ".7";
 };
-
 // *list opacity
 
 listGuests.onmouseover = () => {
@@ -72,6 +65,20 @@ main.onclick = () => {
   guests.innerHTML = "Guests :";
  }
 };
+
+// *resize
+window.onresize = function () {
+ location.reload();
+};
+// window.addEventListener(onresize, function () {
+//  console.log("resize");
+//  main.style.opacity = "1";
+//  anime.style.animation = "rev-filter .5s forwards";
+//  places.innerHTML = "J&K";
+//  guest.innerHTML = "Add Guests";
+//  locations.innerHTML = "Location set to : J&K";
+//  guests.innerHTML = "Guests :";
+// });
 
 // *search function
 

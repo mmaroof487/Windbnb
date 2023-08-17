@@ -11,10 +11,11 @@ Project Description
 
 ### In Progress
 
-- [ ] make Responsive                     (guest list pending)  
 
 ### Done ✓
 
+- [x] make Responsive                     (guest list pending)  
+- [x] onresize filter needs vanish so that filter height adjusts.  
 - [x] filter not working  
 - [x] whatever user selects in anime is to be shown in filter section outside anime  
 

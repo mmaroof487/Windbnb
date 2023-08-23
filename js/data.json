@@ -1,0 +1,56 @@
+[
+ {
+  "img": "../assets/images/heritage-suite-room.jpg",
+  "name": "HOTEL VINTAGE , Private Room",
+  "ratings": "4.8",
+  "location": "Dalgate, Srinagar"
+ },
+ {
+  "img": "../assets/images/ParkLine-apartment-in-Miami-FLba486679-f59b-475d-885a-ae52659d1e51.jpg",
+  "name": "THE HERITAGE , Apartment",
+  "ratings": "4.6",
+  "location": "Lalchowk, Srinagar"
+ },
+ {
+  "img": "../assets/images/Houses-In-India01.jpg",
+  "name": "AVALON , Entire House",
+  "ratings": "4.0",
+  "location": "Aharbal, Baramulla"
+ },
+ {
+  "img": "../assets/images/hotelsdotcom-442679-8a6c131f_w-650423.jpg",
+  "name": "HOTEL KHYBAR , Private room",
+  "ratings": "4.7",
+  "location": "Kokernag, Anantnag"
+ },
+ {
+  "img": "../assets/images/Oyo-12201-Shuhul-Homes-Srinagar-Exterior.JPEG",
+  "name": "GRAND LALIT , Entire House",
+  "ratings": "4.2",
+  "location": "Gulmarg, Baramulla"
+ },
+ {
+  "img": "../assets/images/ice-191473780-63664804_3XL-919379.jpg",
+  "name": "FOUR SEASONS , Apartment",
+  "ratings": "4.8",
+  "location": "Doodhpathri, Anantnag"
+ },
+ {
+  "img": "../assets/images/image.jpg",
+  "name": "MOUNT BURJ , Apartment",
+  "ratings": "4.4",
+  "location": "Shalimar, Srinagar"
+ },
+ {
+  "img": "../assets/images/studio-apartments.jpg",
+  "name": "VIVANTA , Apartment",
+  "ratings": "4.3",
+  "location": "Nishat, Srinagar"
+ },
+ {
+  "img": "../assets/images/Screen-Shot-2021-04-20-at-2.02.58-PM.png",
+  "name": "LEMONTREE , Entire House",
+  "ratings": "4.0",
+  "location": "Pahalgam, Anantnag"
+ }
+]
